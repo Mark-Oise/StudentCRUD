@@ -81,3 +81,16 @@ You can inject environment variables when running the Docker container. For exam
 - `make test`: Run unit tests
 - `make docker-build`: Build the Docker image
 - `make docker-run`: Run the Docker container
+
+## Vagrant Deployment
+
+1. Install Vagrant and VirtualBox on your local machine.
+2. Clone this repository.
+3. Navigate to the project directory.
+4. Run `vagrant up` to create and provision the Vagrant box.
+5. SSH into the Vagrant box with `vagrant ssh`.
+6. Navigate to the app directory: `cd /home/vagrant/app`.
+7. Deploy the services: `make deploy`.
+8. Access the API at `http://localhost:8080`.
+
+To stop the services, run `make docker-compose down` inside the Vagrant box.
